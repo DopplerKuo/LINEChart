@@ -34,8 +34,8 @@ class App extends Component {
     endDay: '',
     inputStartDay: '',
     inputEndDay: '',
-    myName: '郭丞哲 Doppler Kuo',
-    yourName: 'Jennifer',
+    myName: '',
+    yourName: '',
     msgs: [],
     searchTerms: []
   };
