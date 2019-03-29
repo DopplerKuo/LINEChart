@@ -3,9 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "date-fns": "^1.30.1",
+    "globalize": "^1.4.2",
+    "ramda": "^0.26.1",
     "react": "^16.8.5",
+    "react-datepicker": "^2.3.0",
+    "react-dnd": "^7.4.3",
+    "react-dnd-html5-backend": "^7.4.0",
     "react-dom": "^16.8.5",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-tag-input": "^6.4.0",
+    "recharts": "^1.5.0"
   },
   "scripts": {
     "start": "react-scripts start",

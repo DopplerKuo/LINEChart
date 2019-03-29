@@ -1,33 +1,284 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #37383a;
+  color: #fff;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+* {
+  position: relative;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+[class*='btn'] {
+  cursor: pointer;
+  user-select: none;
+}
+
+[class*='bg-'] {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#header {
+  padding: 15px 40px;
+}
+
+#header img {
+  width: 100px;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0px 40px;
+}
+
+.content {
+  height: calc(100vh - 64px);
+  margin-top: 64px;
+}
+
+.main-chart {
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 20px 0px 10px 20px;
+  margin-top: 25px;
+  box-shadow: 0 30px 70px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.apply-btn {
+  display: inline-block;
+  margin-left: 10px;
+  border-radius: 20px;
+  width: 120px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  background-color: rgba(0, 190, 0, 0.32);
+  box-shadow: inset 0 0 0 1px rgba(0, 190, 0, 1);
+  transition: 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: rgba(0, 190, 0, 0.45);
+}
+
+.disable {
+  opacity: 0.4;
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ///  */
+select {
+  margin-bottom: 10px !important;
+  height: 35px !important;
+  font-size: 17px !important;
+}
+
+#loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes loading {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
+}
+
+#loading img {
+  width: 70px;
+  z-index: 30;
+  animation: loading 1s linear 0s infinite both;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.date-picker {
+  position: relative;
+  display: inline-block;
+}
+
+.input-group svg {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.input-group label,
+.select-group label {
+  width: 120px;
+  display: inline-block;
+}
+
+.input-group input {
+  border: none;
+  width: 200px;
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 2px;
+  outline: none;
+}
+
+/* tags */
+.searcher-wrapper {
+  margin-top: 30px;
+}
+
+.react-tags-wrapper {
+  margin-top: 5px;
+}
+
+.tag-wrapper {
+  background-color: #000;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 3px;
+  line-height: 30px;
+  height: 30px;
+  font-size: 15px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.tag-wrapper a {
+  background-color: #fff;
+  color: #000;
+  border-radius: 100%;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  margin-left: 10px;
+}
+
+.ReactTags__selected {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ReactTags__tagInputField {
+  width: 200px;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  padding: 0 10px;
+  margin-top: 5px;
+}
+
+/* ///  */
+.recharts-layer.recharts-line path {
+  stroke-width: 2 !important;
+}
+
+.recharts-layer.recharts-line-dots {
+  opacity: 0;
+}
+
+.recharts-text.recharts-cartesian-axis-tick-value {
+  fill: rgba(255, 255, 255, 1);
+  font-size: 12px;
+}
+
+.recharts-tooltip-label {
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+}
+
+.recharts-legend-item {
+  margin-right: 0 !important;
+  margin-left: 20px !important;
+}
+
+.recharts-legend-item-text {
+  font-size: 13px !important;
+  opacity: 0.8 !important;
+  margin-left: 5px;
+}
+
+.recharts-layer.recharts-cartesian-axis.recharts-yAxis.yAxis {
+  transform: translateX(8px);
+}
+
+.recharts-legend-wrapper {
+  top: -65px !important;
+  right: 0px !important;
+  pointer-events: none;
+}
+
+.select-group select {
+  outline: none;
+  border: 0;
+  height: 30px;
+  font-size: 14px;
+  background-color: transparent;
+  border-radius: 0;
+  color: #fff;
+  text-align: left;
+  padding: 0;
+  transform: translateX(-8px);
+  margin-bottom: 5px;
+}
+
+.x-label {
+  font-size: 12px;
+  opacity: 0.7;
+  left: 3px;
+}
+
+.main-chart .title {
+  position: relative;
+  top: 15px;
+}
+
+.main-chart .title h2 {
+  margin-bottom: 0px;
+}
+
+.y-label {
+  position: absolute;
+  right: 28px;
+  top: 4px;
+  font-size: 12px;
+  opacity: 0.7;
 }
