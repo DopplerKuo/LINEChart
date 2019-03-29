@@ -295,7 +295,7 @@ class App extends Component {
               <option value="zh">中: 1991/02/01（五）</option>
             </select>
           </div>
-          <div className="input-group">
+          {/* <div className="input-group">
             <label htmlFor="myName">Start Day</label>
             <div className="date-picker">
               <DatePicker
@@ -328,7 +328,7 @@ class App extends Component {
             >
               Send
             </div>
-          </div>
+          </div> */}
           <div className="input-group">
             <label htmlFor="myName">Username 1</label>
             <input
